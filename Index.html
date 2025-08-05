@@ -4,8 +4,13 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Proyecto carballo</title>
-    <link rel="stylesheet" href="carballo.css" />
-</head>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css">
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    <script id="MathJax-script" async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+  </head>
 <body>
   <header>
     <h1>Temas de Matemáticas</h1>
@@ -26,43 +31,51 @@
       <p>Donde incluso podemos ver que el ultimo ejemplo de x^5 puede ser derivado mas de 3 veces</p>
 <section>
   <h2>📗 Teorema Fundamental del Cálculo</h2>
-  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Fundamental_theorem_of_calculus_part1.svg/600px-Fundamental_theorem_of_calculus_part1.svg.png" alt="Teorema fundamental del cálculo" class="tema-img">
+  <img src="El_Segundo_tema.jpg" alt="Teorema fundamental del cálculo" class="tema-img">
 
-  <p>El <strong>Teorema Fundamental del Cálculo</strong> establece una conexión directa entre la derivación y la integración.  
-  En palabras simples, dice que:</p>
+  <p>El <strong>Teorema Fundamental del Cálculo</strong> establece una relación profunda entre dos conceptos centrales del cálculo: la <strong>derivación</strong> y la <strong>integración</strong>.</p>
+
+  <p>Se divide en dos partes principales:</p>
+
+  <h3>📌 Primera parte:</h3>
+  <p>Si una función \( f(x) \) es continua en un intervalo cerrado \([a, b]\), entonces la función definida como:</p>
 
   <blockquote>
-    Si \( F \) es una antiderivada de \( f \), entonces:<br>
-    <strong>\(\int_a^b f(x)\,dx = F(b) - F(a)\)</strong>
+    \( F(x) = \int_a^x f(t)\,dt \)
   </blockquote>
 
-  <p>Este teorema permite calcular integrales definidas usando derivadas inversas. Es muy útil para obtener valores acumulados, como ingresos, distancias o áreas.</p>
+  <p>es derivable, y su derivada es:</p>
 
-  <h3>🧾 Ejemplo aplicado a la economía:</h3>
-  <p>Supongamos que el ingreso por unidad diaria es \( f(t) = 100 + 5t \).  
-  ¿Cuál es el ingreso total entre el día 1 y el día 4?</p>
+  <blockquote>
+    \( F'(x) = f(x) \)
+  </blockquote>
 
-  <pre><code>
-def F(t):
-    return 100 * t + (5 / 2) * t**2
+  <p>Esto significa que derivar una integral definida "anula" la integral.</p>
 
-a = 1
-b = 4
-ingreso_total = F(b) - F(a)
+  <h3>📌 Segunda parte:</h3>
+  <p>Si \( F(x) \) es una antiderivada de \( f(x) \), es decir, \( F'(x) = f(x) \), entonces se cumple:</p>
 
-# Resultado:
-# F(1) = 102.5
-# F(4) = 240.0
-# Ingreso total = 240.0 - 102.5 = 137.5
-  </code></pre>
+  <blockquote>
+    \( \int_a^b f(x)\,dx = F(b) - F(a) \)
+  </blockquote>
 
-  <p>Por lo tanto, el ingreso total entre el día 1 y 4 es <strong>137.5</strong>.</p>
+  <p>Esto permite calcular el valor exacto de una integral definida usando una antiderivada.</p>
+
+  <p>Este teorema es una de las bases más importantes del cálculo, ya que conecta el área bajo una curva (integral) con el cambio instantáneo (derivada).</p>
+  <p>Si 
+𝐹(𝑥)F(x) es una antiderivada de 𝑓(𝑥)f(x), entonces:
+∫𝑎𝑏𝑓(𝑥) 𝑑𝑥=𝐹(𝑏)−𝐹(𝑎)∫ ab​
+f(x)dx=F(b)−F(a)
+  </p>
+  <iframe src="https://trinket.io/embed/python3/123e3a53b8c4?start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
 </section>
+
 
   </main>
 
   <footer>
-    <p>Presentación creada por [Tu Nombre] • 2025</p>
+    <p>Presentación hecha por Emiliano Huchim Morales • miercoles 6 de agosto 2025</p>
+    <a class="link" href="bibliografia.html">Bibliografia</a>
   </footer>
 </body>
 </html>
