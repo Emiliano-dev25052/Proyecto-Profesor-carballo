@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Proyecto carballo</title>
+    <link rel="stylesheet" href="carballo.css" />
+</head>
+<body>
+  <header>
+    <h1>Temas de Matemáticas</h1>
+    <p>Derivación Sucesiva y Teorema del Cálculo Central</p>
+  </header>
+
+  <main>
+    <section>
+      <h2>📘 Derivación Sucesiva</h2>
+            <img src="Explicacion_del_tema.jpg" alt="Explicacion_del_tema" height="300" width="300">
+      <p>La <strong>derivación sucesiva</strong>  son las derivadas de una función después de la segunda derivada. El proceso para calcular las derivadas sucesivas es el siguiente: se tiene una función f, la cual podemos derivar y obtener así la función derivada f’. A dicha derivada de f podemos volver a derivarla, obteniendo (f’)’.</p>
+      <p>Esta nueva función se denomina segunda derivada; todas las derivadas calculadas a partir de la segunda son sucesivas; estas, llamadas también de orden superior, poseen grandes aplicaciones, como dar información sobre el trazo de la gráfica de una función, la prueba de la segunda derivada para extremos relativos y la determinación de series infinitas.</p>
+      <p>En este ejemplo podemos ver que f(x)=5x^4 puede ser derivado un maximo de 6 veces</p>
+      <img src="Ejemplo_Mas_de_uno.png" alt="ejemplo">
+      <p>A continuación, puedes probar un ejemplo de derivación usando Python con las siguientes funciones:</p>
+      <p><img src="Ejemplo_teorema.jpg" alt="Ejemplo_teorema"></p>
+    <iframe src="https://trinket.io/embed/python3/18df90bebc83?start=result" width="100%" height="356" frameborder="0" marginwidth="0" marginheight="0" allowfullscreen></iframe>
+      <p>Donde incluso podemos ver que el ultimo ejemplo de x^5 puede ser derivado mas de 3 veces</p>
+<section>
+  <h2>📗 Teorema Fundamental del Cálculo</h2>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/c/c3/Fundamental_theorem_of_calculus_part1.svg/600px-Fundamental_theorem_of_calculus_part1.svg.png" alt="Teorema fundamental del cálculo" class="tema-img">
+
+  <p>El <strong>Teorema Fundamental del Cálculo</strong> establece una conexión directa entre la derivación y la integración.  
+  En palabras simples, dice que:</p>
+
+  <blockquote>
+    Si \( F \) es una antiderivada de \( f \), entonces:<br>
+    <strong>\(\int_a^b f(x)\,dx = F(b) - F(a)\)</strong>
+  </blockquote>
+
+  <p>Este teorema permite calcular integrales definidas usando derivadas inversas. Es muy útil para obtener valores acumulados, como ingresos, distancias o áreas.</p>
+
+  <h3>🧾 Ejemplo aplicado a la economía:</h3>
+  <p>Supongamos que el ingreso por unidad diaria es \( f(t) = 100 + 5t \).  
+  ¿Cuál es el ingreso total entre el día 1 y el día 4?</p>
+
+  <pre><code>
+def F(t):
+    return 100 * t + (5 / 2) * t**2
+
+a = 1
+b = 4
+ingreso_total = F(b) - F(a)
+
+# Resultado:
+# F(1) = 102.5
+# F(4) = 240.0
+# Ingreso total = 240.0 - 102.5 = 137.5
+  </code></pre>
+
+  <p>Por lo tanto, el ingreso total entre el día 1 y 4 es <strong>137.5</strong>.</p>
+</section>
+
+  </main>
+
+  <footer>
+    <p>Presentación creada por [Tu Nombre] • 2025</p>
+  </footer>
+</body>
+</html>
